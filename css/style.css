@@ -326,13 +326,22 @@ color: rgba(255, 255, 255, 0.1);
 
 }
 
+.content-readmore:hover {
+border-bottom: 0.5px solid #FBD784;
+}
+
 .content-readmore a{
     font-size: 18px;
     line-height: 22px;
     color: #FBD784;
     text-decoration: none;
+}
 
-
+.content-readmore a:hover{
+    font-size: 18px;
+    line-height: 22px;
+    color: #FBD784;
+    text-decoration: none;
 }
 
 .img-read {
@@ -343,6 +352,7 @@ right: 0;
 transform: translateY(-50%);
 
 }
+
 
 .content-img img{
 display: block;
