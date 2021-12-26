@@ -1,0 +1,440 @@
+@font-face {
+	font-family: 'Gilroy';
+	src: url('/fonts/Gilroy-ExtraBold.woff') format('woff');
+	font-display: swap;
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('/fonts/Gilroy-Medium.woff') format('woff');
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('/fonts/Gilroy-Bold.woff') format('woff');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Chronicle Display';
+	src: url('/fonts/Chronicle-Display-Bold.otf') format('otf');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Chronicle Display';
+	src: url('/fonts/Chronicle-Display-Semibold.otf') format('otf');
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    
+    }
+
+body {
+margin: 0;;
+font-family: 'Gilroy';
+color: #fff;
+}
+
+.backgraund-img {
+    background-color: #0B1D26 ;
+    background-image: url(/img/BG.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+/* HEADER */
+
+.header {
+    display: block;
+    padding-top: 64px;
+    padding-bottom: 743px;
+}
+
+.nav-wrapper {
+    margin-bottom: 198px;
+    }
+
+.container-wight {
+    max-width: 1790px;
+    padding: 0 15px;
+}
+
+/* Выстраиваем элементы в ряд */
+.row {
+    display: flex;
+    align-items: center;
+    margin: 0px 80px; 
+    
+
+}
+
+/* Расскидываем элементы по краям */
+.space-between {
+    justify-content: space-between;
+}
+
+.logo {
+font-family:'Chronicle Display', serif;
+font-size: 32px;
+font-weight: 700;
+}
+
+.nav ul {
+display: flex;
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+.nav li + li {
+margin-left: 40px;
+    
+}
+
+.nav a {
+color: #fff;
+text-decoration: none;
+font-weight: 700;
+transition: color 0.2s ease-in;
+    
+}
+
+.nav a:hover {
+    color: #FBD784
+
+}
+
+.login {
+    position: relative;
+    padding-left: 30px;
+}
+
+
+.login a{
+    
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s ease-in;
+}
+
+.login a:hover{
+    color: #FBD784}
+
+
+.login::before {
+display: block;
+content: '';
+position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+width: 20px;
+height: 20px;
+background-image: url(/img/account.svg);
+background-size: contain;
+
+
+}
+
+
+
+/* HERO */
+main {
+    margin: 0;
+}
+
+.hero{
+display: block;
+max-width: 980px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+cursor: pointer;
+text-decoration: none;
+}
+
+
+
+/* Разобраться с анимацией, почему срабатывает на каждый элемент */
+.hero-animation:hover {
+    display: block;
+    transform: translateY(-10%);
+    transition: transform 0.5s cubic-bezier(.56,-0.05,.3,1.26);
+}
+
+.hero-category {
+    display: block;
+    position: relative;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    padding-left: 104px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+    margin-bottom: 32px;
+}
+
+/* Псевдо элемент ???? */
+/* .hero-category::before {
+    display: block;
+    position: absolute;
+    left: 250px;
+    top: 10;
+    transform:translateY(-50%);
+    content: "" ;
+    width: 72px;
+    height: 2px;
+    background-color: #FBD784;
+
+} */
+.hero-element {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 72px;
+    height: 2px;
+    background-color: #FBD784;
+
+}
+
+
+
+.hero-title {
+    font-weight: 500;
+    font-size: 78px;
+    line-height: 1.136;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+
+
+/* !!!!Нужно выравнить стрелку по центру по вертикали */
+.hero-scroll {
+display: inline-block;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+color: #FFFFFF;
+text-decoration: none;
+padding-right: 16px;
+
+}
+
+/* MAIN */
+
+
+.container {
+max-width: 1492px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+
+}
+
+/* CONTENT */
+
+.content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 200px;
+
+}
+
+.content:nth-child(even) {
+flex-direction: row-reverse;
+
+}
+
+
+.content-text {
+position: relative;
+max-width: 782px;
+padding-left: 150px;
+
+}
+
+.content-text::before {
+position: absolute;
+transform: translateY(-50%);
+left: 0;
+top: 0;
+display: block;
+content: attr(data-number);
+width: 240px;
+height: 240px;
+font-weight: 700;
+font-size: 240px;
+line-height: 1;
+color: rgba(255, 255, 255, 0.1);
+
+}
+
+
+.content-subtitle {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+    margin-bottom: 27px;
+}
+
+.content-title {
+    max-width: 555px;
+    font-family: Chronicle Display;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.2;
+    margin-bottom: 27px;
+}
+
+.content-p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.78;
+    margin-bottom: 27px;
+
+}
+
+.content-readmore {
+    position: relative;
+    max-width: 127px;
+    padding-right: 10px;
+
+}
+
+.content-readmore a{
+    font-size: 18px;
+    line-height: 22px;
+    color: #FBD784;
+    text-decoration: none;
+
+
+}
+
+.img-read {
+position: absolute;
+content:'';
+top:50%;
+right: 0;
+transform: translateY(-50%);
+
+}
+
+.content-img img{
+display: block;
+max-width: 566px;
+height: auto;
+}
+
+.footer {
+padding-bottom: 120px;
+
+
+}
+.copuright { 
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-logo-copyright {
+    margin-bottom: 24px;
+
+}
+
+.footer-text-copyright {
+max-width: 330px;
+font-weight: 700;
+font-size: 18px;
+line-height: 1.78;
+
+}
+
+.footer-terms-copyright {
+margin-top: auto;
+font-weight: 500;
+font-size: 18px;
+line-height: 1.78;
+color: rgb(255, 255, 255,0.5);
+
+}
+
+.nav-menu-wrapper {
+display: flex;
+
+
+}
+
+.nav-menu + .nav-menu{
+    margin-left: 212px;
+    }
+
+
+.nav-menu {
+    max-width: 200px;
+
+}
+
+.nav-menu-title {
+margin-bottom: 24px;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+color: #FBD784;
+}
+
+.nav-menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu-list li{
+    margin-bottom: 16px;
+}
+
+.nav-menu-list li:last-child{
+    margin-bottom: 0;
+}
+
+
+.nav-list-menu a{
+font-weight: 500;
+font-size: 18px;
+line-height: 1.78;
+color: #fff;
+text-decoration: none;
+
+}
+
+
+.nav-list-menu a:hover{
+    color: #FBD784;
+    transition: 0.2s ease-in;
+
+    }
+
